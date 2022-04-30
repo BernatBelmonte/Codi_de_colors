@@ -1,0 +1,115 @@
+colors = ["negre", "marro", "marró", "vermell", "taronja", "groc", "verd", "blau", "lila", "gris", "blanc"]
+colors_multiplicador = ["negre", "marro", "marró", "vermell", "taronja", "groc", "verd", "blau"]
+tolerancia = ['or', 'plata']
+
+color_1 = 1
+color_2 = 1
+color_3 = 1
+tolerancia_1 = ""
+
+color1 = None
+color2 = None
+color3 = None
+tolerancia1 = None
+
+#Repeteix la pregunta fins que el input concorda amb el array de colors
+while True:
+    print('Quin és el primer color? ')
+
+    color1 = input().lower()
+
+    if color1 in colors:
+        break
+#Estableix el nombre depenent quin color s'ha seleccionat
+
+if color1 == "marro" or "marró":
+    color_1 = 1
+if color1 == "vermell":
+    color_1 = 2
+if color1 == "taronja":
+    color_1 = 3    
+if color1 == "groc":
+    color_1 = 4
+if color1 == "verd":
+    color_1 = 5
+if color1 == "blau":
+    color_1 = 6
+if color1 == "lila":
+    color_1 = 7
+if color1 == "gris":
+    color_1 = 8
+if color1 == "blanc":
+    color_1 = 9
+if color1 == "negre":
+    color_1 = 0
+    
+
+while True:
+
+    print('Quin és el segon color? ')
+
+    color2 = input().lower()
+
+    if color2 in colors:
+        break
+#
+  
+if color2 == "marro" or "marró":
+    color_2 = 1           
+if color2 == "vermell":
+    color_2 = 2            
+if color2 == "taronja":
+    color_2 = 3           
+if color2 == "groc":
+    color_2 = 4          
+if color2 == "verd":
+    color_2 = 5           
+if color2 == "blau":
+    color_2 = 6          
+if color2 == "lila":
+    color_2 = 7         
+if color2 == "gris":
+    color_2 = 8         
+if color2 == "blanc":
+    color_2 = 9
+if color2 =="negre":
+    color_2 = 0
+          
+while True:
+    print('Quin és el color multiplicador? ')
+    color3 = input().lower()
+
+    if color3 in colors_multiplicador:
+        break
+
+if color3 == "marro" or "marró":
+    color_3 = 10           
+if color3 == "vermell":
+    color_3 = 100           
+if color3 == "taronja":
+    color_3 = 1000           
+if color3 == "groc":
+    color_3 = 10000          
+if color3 == "verd":
+    color_3 = 100000           
+if color3 == "blau":
+    color_3 = 1000000
+if color3 == "negre":
+    color_3 = 1          
+
+while True:
+    print('Quina tolerància té(or/plata)')
+    tolerancia1 = input().lower()
+    if tolerancia1 in tolerancia:
+        break
+if tolerancia1 == "or":
+    tolerancia_1 = "+- 5%"
+if tolerancia1 == "plata":
+    tolerancia_1 = "+- 10%"
+
+valor = int(str(color_1) + str(color_2))
+
+print(color_3)
+print("El valor de la teva resistència és de", valor * color_3, "Ohms amb una tolerància de", tolerancia_1)
+  
+
